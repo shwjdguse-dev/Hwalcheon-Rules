@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="활천중학교 학교 제규정 원본 PDF 검색">
+  <title>활천중학교 제규정</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <button id="hamb" aria-label="목차 열기">☰</button>
+  <div>
+    <h1 id="appTitle">🏫 활천중학교 제규정</h1>
+    <p id="appSubtitle"></p>
+  </div>
+  <div class="head">
+    <button id="official" class="hidden">🏫 학교 홈페이지 원문</button>
+    <button id="share">🔗 현재 규정 링크</button>
+    <button id="open">📄 새 창에서 PDF</button>
+  </div>
+</header>
+
+<div class="app">
+  <aside id="side">
+    <div class="search">
+      <input id="q" placeholder="규정명 검색" aria-label="규정명 검색">
+      <button id="clear" aria-label="검색 지우기">×</button>
+    </div>
+    <div class="hint">
+      규정을 선택하면 원본 PDF의 해당 페이지로 이동합니다.<br>
+      <b>내년에는 config.js와 PDF만 교체하면 됩니다.</b>
+    </div>
+    <nav id="nav"></nav>
+  </aside>
+
+  <main>
+    <div class="bar">
+      <div><b id="title"></b><span id="meta"></span></div>
+      <div>
+        <button id="prev">← 이전 규정</button>
+        <button id="next">다음 규정 →</button>
+      </div>
+    </div>
+    <div id="pdfWrap"></div>
+  </main>
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
